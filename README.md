@@ -20,8 +20,8 @@ PyShield is a Python-Based Real-Time Network Firewall that monitors and controls
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Fares-Abdullatif/Firewall.git
-cd Firewall
+git clone https://github.com/Fares-Abdullatif/PyShield.git
+cd PyShield
 ```
 
 2. Install required dependencies:
@@ -33,52 +33,52 @@ pip install scapy
 
 ### Basic Commands
 
-Start firewall on a specific network interface:
+Start PyShield on a specific network interface:
 ```bash
-python firewall.py --interface Ethernet
+python PyShield.py --interface Ethernet
 ```
 
 ### IP Blacklisting
 
 Add an IP to the blacklist:
 ```bash
-python firewall.py --blacklist 192.168.1.100
+python PyShield.py --blacklist 192.168.1.100
 ```
 
 Remove an IP from the blacklist:
 ```bash
-python firewall.py --unblacklist 192.168.1.100
+python PyShield.py --unblacklist 192.168.1.100
 ```
 
 ### Port Management
 
 Set allowed ports (only these ports will be allowed):
 ```bash
-python firewall.py --allow-ports 80 443 22
+python PyShield.py --allow-ports 80 443 22
 ```
 
 Set blocked ports (these ports will be blocked):
 ```bash
-python firewall.py --block-ports 25 135 139
+python PyShield.py --block-ports 25 135 139
 ```
 
 ### ICMP Control
 
 Allow ICMP traffic (ping):
 ```bash
-python firewall.py --allow-icmp
+python PyShield.py --allow-icmp
 ```
 
 Block ICMP traffic:
 ```bash
-python firewall.py --block-icmp
+python PyShield.py --block-icmp
 ```
 
 ### View Traffic Logs
 
 Display all traffic logs:
 ```bash
-python firewall.py --show-logs
+python PyShield.py --show-logs
 ```
 
 ## How It Works
@@ -101,7 +101,7 @@ python firewall.py --show-logs
 
 ### Configuration Variables
 
-Edit the global variables in `firewall.py` to customize default behavior:
+Edit the global variables in `PyShield.py` to customize default behavior:
 
 ```python
 BLACKLISTED_IPS = set()      # IPs to block
@@ -112,7 +112,7 @@ ALLOW_ICMP = True             # Allow ICMP by default
 
 ## Logs
 
-All traffic events are logged to `firewall.log` with timestamps. The log file maintains a persistent record of:
+All traffic events are logged to `PyShield.log` with timestamps. The log file maintains a persistent record of:
 - Allowed packets
 - Blocked packets (with reason)
 - Configuration changes
@@ -129,20 +129,20 @@ All traffic events are logged to `firewall.log` with timestamps. The log file ma
 
 ### Scenario 1: Block all traffic from a specific IP
 ```bash
-python firewall.py --blacklist 192.168.1.50
-python firewall.py --interface Ethernet
+python PyShield.py --blacklist 192.168.1.50
+python PyShield.py --interface Ethernet
 ```
 
 ### Scenario 2: Only allow web traffic (HTTP/HTTPS)
 ```bash
-python firewall.py --allow-ports 80 443
-python firewall.py --interface Ethernet
+python PyShield.py --allow-ports 80 443
+python PyShield.py --interface Ethernet
 ```
 
 ### Scenario 3: Block common attack ports
 ```bash
-python firewall.py --block-ports 25 135 139 445
-python firewall.py --interface Ethernet
+python PyShield.py --block-ports 25 135 139 445
+python PyShield.py --interface Ethernet
 ```
 
 ## License
