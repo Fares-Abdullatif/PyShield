@@ -12,7 +12,7 @@ ALLOW_ICMP = True  # Set to False to block all ICMP traffic
 TRAFFIC_LOGS = []
 
 # Logging setup
-LOG_FILE = 'firewall.log'
+LOG_FILE = 'PyShield.log'
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 
 
@@ -77,7 +77,7 @@ def start_firewall(interface):
     """
     Starts the firewall and begins sniffing packets.
     """
-    print(f"Starting firewall on interface {interface}...")
+    print(f"Starting PyShield on interface {interface}...")
     sniff(iface=interface, prn=packet_callback, store=False)
 
 
@@ -141,10 +141,10 @@ def cli():
     """
     Command-line interface for the firewall.
     """
-    parser = argparse.ArgumentParser(description="Python Firewall CLI", epilog="Example usage:\n"
-                                                                               "  python firewall.py --interface Ethernet\n"
-                                                                               "  python firewall.py --blacklist 192.168.1.100\n"
-                                                                               "  python firewall.py --show-logs",
+    parser = argparse.ArgumentParser(description="PyShield CLI", epilog="Example usage:\n"
+                                                                               "  python PyShield.py --interface Ethernet\n"
+                                                                               "  python PyShield.py --blacklist 192.168.1.100\n"
+                                                                               "  python PyShield.py --show-logs",
                                      formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument("--interface", help="Network interface to monitor (e.g. Ethernet, Wi-Fi)")
     parser.add_argument("--blacklist", help="Add an IP to the blacklist (e.g. 192.168.1.100)")
