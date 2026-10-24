@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Firewall.iml" filepath="$PROJECT_DIR$/.idea/Firewall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PyShield.iml" filepath="$PROJECT_DIR$/.idea/PyShield.iml" />
     </modules>
   </component>
 </project>
