@@ -1,6 +1,6 @@
-# Python Firewall
+# PyShield
 
-A lightweight Python-based firewall application that monitors and controls network traffic on specified interfaces. Built using Scapy, this firewall allows you to blacklist IPs, manage allowed/blocked ports, and control ICMP traffic with an easy-to-use command-line interface.
+PyShield is a Python-Based Real-Time Network Firewall that monitors and controls network traffic on specified interfaces. Built using Scapy, this firewall allows you to blacklist IPs, manage allowed/blocked ports, and control ICMP traffic with an easy-to-use command-line interface.
 
 ## Features
 
